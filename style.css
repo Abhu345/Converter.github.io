@@ -23,7 +23,7 @@ h3{
      width:70vh;
      @media screen and (max-width: 600px) {
         width: 90vw; 
-        padding: 1rem;
+        padding: 2rem;
     }
 }
 
