@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:skyblue
+}
+h3{
+    text-align: center;
+}
+.main {
+    width: 100%;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+     min-height: 45vh;
+     width:70vh;
+}
+
+.first p {
+    margin-top: 20px;
+}
+select,button{
+    width: 100%;
+    border: none;
+    outline: none;
+    border: 1px solid red;
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+   height: 30px;
+   border: 1px solid red;
+   border-radius: 5px;
+}
+.second{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+.cycle{
+    height: 30px;
+    width: 30px;
+    border: 4px solid black;
+    border-radius: 50%;
+    border-bottom: 4px solid red;
+    animation: color 2s linear 0s infinite normal;
+}
+@keyframes color{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.one,.three{
+    display: flex;
+    align-items: center;
+}
+select{
+    height: 20px;
+    width: 60px;
+}
+.four{
+    margin-top: 20px;
+}
+button{
+    padding: 10px;
+    border-radius: 5px;
+}
