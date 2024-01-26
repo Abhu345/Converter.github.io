@@ -32,14 +32,22 @@ const updateFlag = (element) => {
   img.src = newSrc;
 };
 
-btn.addEventListener("click", async (evt) => {
+function update(){
   let amt = document.querySelector("input");
   let amtval = amt.value;
   if (amtval < 1 || amtval == " ") {
     alert("Invalid Value");
     amt.value = "";
   }
-
+}
+btn.addEventListener("click", async (evt) => {
+  // let amt = document.querySelector("input");
+  // let amtval = amt.value;
+  // if (amtval < 1 || amtval == " ") {
+  //   alert("Invalid Value");
+  //   amt.value = "";
+  // }
+  update();
   const URL = `${BASE_URL}/${fromCurr.value.toLowerCase()}/${toCurr.value.toLowerCase()}.json`;
    let response=await fetch(URL);
    let data=await response.json();
@@ -48,6 +56,11 @@ btn.addEventListener("click", async (evt) => {
    const ans = finalamount.toFixed(3);
    para.innerText=`${amtval} ${fromCurr.value} = ${ans} ${toCurr.value}`;
  
+})
+let Input=document.querySelector("input");
+Input.addEventListener("keydown",function(event){
+  if(event.key=="Enter")
+  update();
 })
 
 
